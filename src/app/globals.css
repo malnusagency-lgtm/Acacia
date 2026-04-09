@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+/* ===== ACACIA DESIGN SYSTEM ===== */
+/* "Clinical Elegance" — Premium cleaning company in Nairobi */
+
+/* --- Light Theme (Default) --- */
+:root {
+  --background: #f7faf8;
+  --foreground: #101413;
+  --surface: #f0f5f2;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #e8edea;
+  --surface-container: #dce3df;
+  --surface-container-high: #d0d9d4;
+  --surface-container-highest: #c4cfc9;
+  --surface-variant: #dbe5de;
+  --on-surface: #101413;
+  --on-surface-variant: #3e4a44;
+  --primary: #1a6b4a;
+  --primary-container: #a0d1bc;
+  --primary-dim: #0b3d2e;
+  --on-primary: #ffffff;
+  --on-primary-container: #002116;
+  --secondary-fixed: #8ab900;
+  --secondary-container: #c3f400;
+  --on-secondary-fixed: #161e00;
+  --tertiary: #007a8a;
+  --tertiary-container: #b0ecf7;
+  --on-tertiary: #ffffff;
+  --outline: #6e7a73;
+  --outline-variant: #bec8c1;
+  --inverse-surface: #2d3130;
+  --inverse-on-surface: #ecf0ee;
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glow-primary: rgba(26, 107, 74, 0.15);
+  --glow-secondary: rgba(195, 244, 0, 0.2);
+  --glow-tertiary: rgba(0, 218, 243, 0.1);
+  --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(247, 250, 248, 0.7);
+}
+
+/* --- Dark Theme --- */
+.dark {
+  --background: #101413;
+  --foreground: #e0e3e1;
+  --surface: #101413;
+  --surface-container-lowest: #0b0f0e;
+  --surface-container-low: #181c1b;
+  --surface-container: #1c201f;
+  --surface-container-high: #272b2a;
+  --surface-container-highest: #323634;
+  --surface-variant: #323634;
+  --on-surface: #e0e3e1;
+  --on-surface-variant: #c0c8c3;
+  --primary: #a0d1bc;
+  --primary-container: #0b3d2e;
+  --primary-dim: #a0d1bc;
+  --on-primary: #043829;
+  --on-primary-container: #79a894;
+  --secondary-fixed: #c3f400;
+  --secondary-container: #c3f400;
+  --on-secondary-fixed: #161e00;
+  --tertiary: #00daf3;
+  --tertiary-container: #003c44;
+  --on-tertiary: #00363d;
+  --outline: #8a938d;
+  --outline-variant: #414944;
+  --inverse-surface: #e0e3e1;
+  --inverse-on-surface: #2d3130;
+  --glass-bg: rgba(50, 54, 52, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glow-primary: rgba(160, 209, 188, 0.08);
+  --glow-secondary: rgba(195, 244, 0, 0.15);
+  --glow-tertiary: rgba(0, 218, 243, 0.08);
+  --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(16, 20, 19, 0.7);
+}
+
+/* --- Tailwind v4 @theme tokens --- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-lowest: var(--surface-container-lowest);
+  --color-surface-low: var(--surface-container-low);
+  --color-surface-mid: var(--surface-container);
+  --color-surface-high: var(--surface-container-high);
+  --color-surface-highest: var(--surface-container-highest);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-primary-dim: var(--primary-dim);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--secondary-fixed);
+  --color-accent-container: var(--secondary-container);
+  --color-on-accent: var(--on-secondary-fixed);
+  --color-glow: var(--tertiary);
+  --color-glow-container: var(--tertiary-container);
+  --color-on-glow: var(--on-tertiary);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-nav-bg: var(--nav-bg);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* --- Base Styles --- */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  @apply antialiased;
+}
+
+::selection {
+  background: var(--secondary-fixed);
+  color: var(--on-secondary-fixed);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* --- Custom Utilities --- */
+@utility glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+@utility glow-hover {
+  transition: box-shadow 0.4s ease;
+  &:hover {
+    box-shadow: 0 0 40px var(--glow-tertiary);
+  }
+}
+
+@utility glow-accent {
+  transition: box-shadow 0.4s ease;
+  &:hover {
+    box-shadow: 0 0 20px var(--glow-secondary);
+  }
+}
+
+@utility card-elevated {
+  background: var(--surface-container);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background: var(--surface-container-high);
+    box-shadow: 0 0 30px var(--glow-tertiary);
+    transform: translateY(-2px);
+  }
+}
+
+/* --- Animations --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px var(--glow-tertiary); }
+  50% { box-shadow: 0 0 25px var(--glow-tertiary); }
+}
+
+@keyframes ping-dot {
+  0% { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+/* --- Performance & Safari Fixes --- */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Scrollbar (dark) --- */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--surface-container-lowest);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 3px;
+}
+
+/* --- Hide scrollbar for testimonials --- */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- Cinematic reveal line --- */
+.reveal-line {
+  width: 0;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-line.active {
+  width: 100%;
+}
