@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="text-on-primary font-heading font-black text-sm">A</span>
               </div>
               <span className="text-xl font-heading font-black tracking-tighter text-primary">
-                ACACIA
+                GLACIER GROUP
               </span>
             </div>
             <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
@@ -122,7 +122,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-primary mt-0.5 shrink-0" />
-                <p className="text-on-surface text-sm">hello@acaciacleaners.co.ke</p>
+                <p className="text-on-surface text-sm">hello@glaciergroup.co.ke</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
@@ -137,7 +137,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-on-surface-variant text-xs">
-            © {new Date().getFullYear()} Acacia Cleaners. All rights reserved.
+            © {new Date().getFullYear()} Glacier group. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-on-surface-variant">
             <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>

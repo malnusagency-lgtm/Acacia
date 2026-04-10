@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const testimonials = [
   {
-    text: "I've never seen my Westlands office so clean. ACACIA's team was professional, on time, and left the place smelling amazing. We now have them on a weekly contract.",
+    text: "I've never seen my Westlands office so clean. Glacier group's team was professional, on time, and left the place smelling amazing. We now have them on a weekly contract.",
     name: "David O.",
     role: "Tech Executive, Westlands",
     rating: 5,
@@ -17,13 +17,13 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Fumigation usually smells terrible, but Acacia used eco-friendly products that left no harsh odor. The cockroaches haven't come back in 6 months!",
+    text: "Fumigation usually smells terrible, but Glacier group used eco-friendly products that left no harsh odor. The cockroaches haven't come back in 6 months!",
     name: "James K.",
     role: "Homeowner, Karen",
     rating: 5,
   },
   {
-    text: "We switched from our previous cleaning company to Acacia and the difference is night and day. The team is thorough, honest, and very reliable.",
+    text: "We switched from our previous cleaning company to Glacier group and the difference is night and day. The team is thorough, honest, and very reliable.",
     name: "Grace W.",
     role: "Property Manager, Kilimani",
     rating: 5,

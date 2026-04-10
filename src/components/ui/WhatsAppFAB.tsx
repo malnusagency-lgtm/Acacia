@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function WhatsAppFAB() {
   return (
     <motion.a
-      href="https://wa.me/254700000000?text=Hi%20Acacia!%20I%27d%20like%20to%20book%20a%20cleaning%20service."
+      href="https://wa.me/254700000000?text=Hi%20Glacier%20group!%20I%27d%20like%20to%20book%20a%20cleaning%20service."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300"

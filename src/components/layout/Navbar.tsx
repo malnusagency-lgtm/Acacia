@@ -11,6 +11,7 @@ import MagneticWrapper from "@/components/ui/MagneticWrapper";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/process", label: "Our Process" },
   { href: "/contact", label: "Contact" },
@@ -48,7 +49,7 @@ export default function Navbar() {
               <span className="text-on-primary font-heading font-black text-sm">A</span>
             </div>
             <span className="text-xl font-heading font-black tracking-tighter text-primary">
-              ACACIA
+              GLACIER GROUP
             </span>
           </Link>
 
@@ -114,14 +115,16 @@ export default function Navbar() {
             </button>
 
             {/* Book Now CTA */}
-            <MagneticWrapper className="hidden md:block">
-              <Link
-                href="/booking"
-                className="flex bg-accent text-on-accent px-6 py-2.5 rounded-full font-heading font-bold text-sm glow-accent transition-all duration-300 hover:scale-105 active:scale-95"
-              >
-                Book Now
-              </Link>
-            </MagneticWrapper>
+            {pathname !== '/' && (
+              <MagneticWrapper className="hidden md:block">
+                <Link
+                  href="/booking"
+                  className="flex bg-accent text-on-accent px-6 py-2.5 rounded-full font-heading font-bold text-sm glow-accent transition-all duration-300 hover:scale-105 active:scale-95"
+                >
+                  Book Now
+                </Link>
+              </MagneticWrapper>
+            )}
 
             {/* Mobile Menu Toggle */}
             <button
@@ -175,19 +178,21 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
-                <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="mt-4"
-                >
-                  <Link
-                    href="/booking"
-                    className="block w-full text-center bg-accent text-on-accent px-6 py-4 rounded-xl font-heading font-bold text-lg"
+                {pathname !== '/' && (
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="mt-4"
                   >
-                    Book Now
-                  </Link>
-                </motion.div>
+                    <Link
+                      href="/booking"
+                      className="block w-full text-center bg-accent text-on-accent px-6 py-4 rounded-xl font-heading font-bold text-lg"
+                    >
+                      Book Now
+                    </Link>
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           </motion.div>

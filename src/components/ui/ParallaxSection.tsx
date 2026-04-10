@@ -48,15 +48,15 @@ export default function ParallaxSection({
           className="w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url('${backgroundImage}')`,
-            opacity: 0.6, // Higher visibility as requested
+            opacity: 1, // Higher visibility as requested
           }}
         />
         {/* Dynamic Overlays */}
         <motion.div
-            className="absolute inset-0 bg-background/50 dark:bg-background/60 backdrop-blur-[1px]"
-            style={{ opacity: useTransform(scrollYProgress, [0, 0.5], [0.4, 0.6]) }}
+            className="absolute inset-0 bg-background/20 dark:bg-background/40 backdrop-blur-[1px]"
+            style={{ opacity: useTransform(scrollYProgress, [0, 0.5], [0.2, 0.8]) }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/10" />
       </motion.div>
 
       {/* Content */}

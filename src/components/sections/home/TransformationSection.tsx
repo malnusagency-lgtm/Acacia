@@ -15,7 +15,7 @@ export default function TransformationSection() {
                 <span className="text-accent text-[10px] font-bold uppercase tracking-wider">The Transformation</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight mb-8">
-                See the <span className="text-primary italic">Acacia</span> Difference.
+                See the <span className="text-primary italic">Glacier group</span> Difference.
               </h2>
               <p className="text-lg text-on-surface-variant leading-relaxed mb-10 font-light">
                 We don&apos;t just clean; we restore. Our deep cleaning and fumigation services bring back the original brilliance of your surfaces while ensuring a safe, pest-free environment.

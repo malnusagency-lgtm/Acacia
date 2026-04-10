@@ -4,8 +4,8 @@ import StorySection from "@/components/sections/about/StorySection";
 import TeamSection from "@/components/sections/about/TeamSection";
 
 export const metadata: Metadata = {
-  title: "About Us | Acacia Cleaners — Nairobi",
-  description: "Learn about Acacia Cleaners — Nairobi's most trusted cleaning and fumigation company. Our story, team, and commitment to eco-friendly cleaning.",
+  title: "About Us | Glacier group — Nairobi",
+  description: "Learn about Glacier group — Nairobi's most trusted cleaning and fumigation company. Our story, team, and commitment to eco-friendly cleaning.",
 };
 
 export default function AboutPage() {

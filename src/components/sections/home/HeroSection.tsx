@@ -10,7 +10,7 @@ import TextReveal from "@/components/ui/TextReveal";
 export default function HeroSection() {
   return (
     <ParallaxSection
-      backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuCOsWesgx61VI8t7EZAgRlflhS1q47SSIogaiTpC4M_ydbSTTCVMMZGjxJ0k3TijZM0smslhWYaw7jHVA05I2nCzEulqGmAwFrwZiIaljxUasgmzAuwC9lgGEDoGaCw93FVY1Jgd2pQhBK2Ef53LTtZqZZ_RWVoW9htPSPSDQs4-judJU1Z7tqw2ETAnlCnBPRlfHO4L6UQWpt4hac3-53Qyko0zfP6Pp5g3-POFHyAWALQfPU1lXpGoX6n7jkKLGxmKTcCUC3Fmow"
+      backgroundImage="/images/home_hero.png"
       parallaxStrength={200}
       className="pt-20"
     >

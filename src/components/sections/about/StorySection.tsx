@@ -18,7 +18,7 @@ export default function StorySection() {
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Our Mission</h2>
             <p className="text-on-surface-variant leading-relaxed text-lg mb-6">
-              Acacia was founded in 2020 by a team of Nairobi professionals who were frustrated with the inconsistency of cleaning services in the city. We set out to build a company that you can actually rely on — one that shows up on time, uses safe products, and delivers results every single time.
+              Glacier group was founded in 2020 by a team of Nairobi professionals who were frustrated with the inconsistency of cleaning services in the city. We set out to build a company that you can actually rely on — one that shows up on time, uses safe products, and delivers results every single time.
             </p>
             <p className="text-on-surface-variant leading-relaxed">
               Today, we serve over 500 homes and offices across Nairobi. Every member of our team is vetted, trained, and equipped with professional-grade tools and eco-friendly cleaning products.

@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Acacia Cleaners | Premium Cleaning & Fumigation in Nairobi",
+  title: "Glacier group | Premium Cleaning & Fumigation in Nairobi",
   description:
     "Nairobi's most trusted cleaning and fumigation service. Home cleaning, office cleaning, fumigation, and move-in/out services. Eco-friendly products, professional teams, same-day service.",
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "home cleaning Kenya",
     "office cleaning Nairobi",
     "eco-friendly cleaning",
-    "Acacia cleaners",
+    "Glacier group",
   ],
 };
 

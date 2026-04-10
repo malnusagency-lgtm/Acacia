@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-heading font-bold text-lg mb-2">Email</h3>
                 <p className="text-sm text-on-surface-variant mb-4">For detailed inquiries, quotes, and corporate partnerships.</p>
-                <a href="mailto:hello@acaciacleaners.co.ke" className="text-primary font-bold text-sm">hello@acaciacleaners.co.ke</a>
+                <a href="mailto:hello@glaciergroup.co.ke" className="text-primary font-bold text-sm">hello@glaciergroup.co.ke</a>
               </div>
             </StaggerItem>
             <StaggerItem>

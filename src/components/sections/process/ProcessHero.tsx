@@ -7,7 +7,7 @@ import TextReveal from "@/components/ui/TextReveal";
 export default function ProcessHero() {
   return (
     <ParallaxSection
-      backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuBDzOqVgZkeTYyrR7LFDz8uLQ1KD5iOTiUSOCf0CfQtsWAx6lfvohsloITgEyERJ3glKieyYdC55EGchM4wxEnWFi06Wy8Gzi2F3ehEx9zEKZmRTzIgcgtzlBX9nCjLZsHjQHERNrLK4MiKYjYezUtA7ExDp2xMW7-LbkKjnuE9QGpJ-TtvmijF4Lohf1tdtFLuDSoZSOsb1tDOF9oakvNFZmWMGmCj4XLHXF2XBtT9XYDaej5acXQgAP3Sd2fpMI_NB1llKK2Vbe0"
+      backgroundImage="/images/process_hero.png"
       parallaxStrength={150}
       minHeight="min-h-[70vh]"
       className="pt-20"
