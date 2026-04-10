@@ -32,7 +32,38 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
+
+  // Measure card width for accurate sliding
+  useEffect(() => {
+    if (containerRef.current) {
+      const firstCard = containerRef.current.querySelector(".testimonial-card");
+      if (firstCard) {
+        setCardWidth(firstCard.clientWidth + 24); // Width + Gap
+      }
+    }
+
+    const handleResize = () => {
+      const firstCard = containerRef.current?.querySelector(".testimonial-card");
+      if (firstCard) setCardWidth(firstCard.clientWidth + 24);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-play interval
+  useEffect(() => {
+    if (isHovered || isDragging || !cardWidth) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isHovered, isDragging, cardWidth]);
+
   return (
     <section className="py-24 lg:py-32 bg-surface-low overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -45,22 +76,47 @@ export default function TestimonialsSection() {
           </p>
         </ScrollReveal>
 
-        {/* Outer overflow container for physics calculations */}
-        <motion.div className="cursor-grab active:cursor-grabbing overflow-hidden pb-8 -mx-6 px-6">
+        {/* Outer overflow container */}
+        <div 
+          className="relative overflow-hidden pb-8 -mx-6 px-6"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <motion.div
+            ref={containerRef}
             drag="x"
-            dragConstraints={{ right: 0, left: -1000 }} // Note: in sophisticated production, left constraint is mapped to scrollWidth dynamcally. -1000 is safe padding fallback.
-            className="flex gap-6 w-max"
+            dragConstraints={{ 
+                right: 0, 
+                left: -(cardWidth * (testimonials.length - 1)) 
+            }}
+            onDragStart={() => setIsDragging(true)}
+            onDragEnd={() => setIsDragging(false)}
+            animate={{ 
+              x: isDragging ? undefined : -(currentIndex * cardWidth) 
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="flex gap-6 w-max cursor-grab active:cursor-grabbing"
           >
           {testimonials.map((testimonial, i) => (
             <div
               key={testimonial.name}
-              className="min-w-[85vw] sm:min-w-[340px] md:min-w-[380px]"
+              className="testimonial-card w-[calc(100vw-3rem)] sm:w-[340px] md:w-[380px] shrink-0"
             >
               <div className="glass p-8 rounded-2xl h-full flex flex-col">
                 <div className="flex gap-1 text-accent mb-5">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} size={16} fill="currentColor" />
+                    <motion.div
+                      key={j}
+                      animate={{ rotate: 360 }}
+                      transition={{ 
+                        duration: 8, 
+                        repeat: Infinity, 
+                        ease: "linear",
+                        delay: j * 0.5 
+                      }}
+                    >
+                      <Star size={16} fill="currentColor" />
+                    </motion.div>
                   ))}
                 </div>
                 <p className="text-lg mb-8 font-light leading-relaxed italic flex-1">
@@ -81,7 +137,21 @@ export default function TestimonialsSection() {
             </div>
           ))}
           </motion.div>
-        </motion.div>
+
+          {/* Indicators */}
+          <div className="flex justify-center gap-2 mt-12">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentIndex === i ? "bg-accent w-6" : "bg-outline-variant"
+                }`}
+                aria-label={`Go to testimonial ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

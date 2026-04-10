@@ -19,7 +19,7 @@ export default function ParallaxSection({
   overlayOpacity = 0.5,
   parallaxStrength = 150,
   className = "",
-  minHeight = "min-h-screen",
+  minHeight = "min-h-[100dvh]",
 }: ParallaxSectionProps) {
   const containerRef = useRef<HTMLElement>(null);
 

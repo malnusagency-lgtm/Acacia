@@ -20,30 +20,20 @@ export default function CoverageSection() {
     <section className="py-24 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Map Placeholder */}
+          {/* Real Google Map Embed */}
           <ScrollReveal direction="left">
             <div className="relative rounded-2xl overflow-hidden aspect-video shadow-2xl border border-outline-variant/20">
-              <div
-                className="w-full h-full bg-cover bg-center grayscale dark:grayscale contrast-110 dark:contrast-125 opacity-60 dark:opacity-50"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWM_6CxQpiwx-mCMn-mndk3xc9_77K7Nlpjwzg9_Iy99gKPLMDGnHqvWzyHvwJwl068eUz1aq6WWPA3ZbCdyT64QREf6tW4JgDDAgc9TWmrwvSWnF-tbCPekyqAoDz38vU9Kb58Iu_WXcmybE9Knp7gs7VtuQ-FmdVYW_vre2NpBRteRDVZsOmlZv4dC7WqUFsg_LiVdOLiJVRjWn_NQZrBgHRNspoGB8a6G4s9of1VAQXt8mtN0nHFthh1ZpeOh_E7CI5fT8rvek')",
-                }}
-              />
-              <div className="absolute inset-0 bg-primary/10 dark:bg-primary/5 mix-blend-overlay" />
-              {/* Animated Pins */}
-              <div className="absolute top-1/4 left-1/3">
-                <div className="w-3 h-3 bg-accent rounded-full animate-ping absolute" />
-                <div className="w-3 h-3 bg-accent rounded-full relative shadow-[0_0_12px_var(--secondary-fixed)]" />
-              </div>
-              <div className="absolute bottom-1/3 right-1/2">
-                <div className="w-3 h-3 bg-glow rounded-full animate-ping absolute" />
-                <div className="w-3 h-3 bg-glow rounded-full relative shadow-[0_0_12px_var(--tertiary)]" />
-              </div>
-              <div className="absolute top-1/2 right-1/4">
-                <div className="w-3 h-3 bg-primary rounded-full animate-ping absolute" />
-                <div className="w-3 h-3 bg-primary rounded-full relative shadow-[0_0_12px_var(--primary)]" />
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127878.50294711696!2d36.76822079089761!3d-1.303191143891461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1712740000000!5m2!1sen!2ske"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale dark:grayscale contrast-110 opacity-80 max-w-full"
+              ></iframe>
+              <div className="absolute inset-0 pointer-events-none bg-primary/5 dark:bg-primary/5 mix-blend-overlay" />
             </div>
           </ScrollReveal>
 

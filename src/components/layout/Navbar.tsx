@@ -44,7 +44,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center group">
             <span className="text-lg md:text-xl font-heading font-black tracking-tighter text-primary">
               GLACIER GROUP
             </span>

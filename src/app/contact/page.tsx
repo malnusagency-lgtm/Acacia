@@ -90,7 +90,16 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden aspect-video border border-outline-variant/20 mb-6">
-                <div className="w-full h-full bg-cover bg-center grayscale dark:grayscale contrast-110 dark:contrast-125 opacity-60 dark:opacity-50" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWM_6CxQpiwx-mCMn-mndk3xc9_77K7Nlpjwzg9_Iy99gKPLMDGnHqvWzyHvwJwl068eUz1aq6WWPA3ZbCdyT64QREf6tW4JgDDAgc9TWmrwvSWnF-tbCPekyqAoDz38vU9Kb58Iu_WXcmybE9Knp7gs7VtuQ-FmdVYW_vre2NpBRteRDVZsOmlZv4dC7WqUFsg_LiVdOLiJVRjWn_NQZrBgHRNspoGB8a6G4s9of1VAQXt8mtN0nHFthh1ZpeOh_E7CI5fT8rvek')" }} />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127878.50294711696!2d36.76822079089761!3d-1.303191143891461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1712740000000!5m2!1sen!2ske"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale dark:grayscale contrast-110 opacity-80 max-w-full"
+                ></iframe>
               </div>
               <div className="glass p-5 rounded-xl inline-flex items-center gap-3">
                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />

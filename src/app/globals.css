@@ -184,6 +184,16 @@ h1, h2, h3, h4, h5, h6 {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+input, select, textarea {
+  font-size: 16px !important; /* Prevent auto-zoom on iOS */
 }
 
 @media (max-width: 768px) {
