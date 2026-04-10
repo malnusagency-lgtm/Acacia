@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
             <ScrollReveal
               key={testimonial.name}
               delay={i * 0.1}
-              className="min-w-[340px] md:min-w-[380px] snap-center"
+              className="min-w-[85vw] sm:min-w-[340px] md:min-w-[380px] snap-center"
             >
               <div className="glass p-8 rounded-2xl h-full flex flex-col">
                 <div className="flex gap-1 text-accent mb-5">

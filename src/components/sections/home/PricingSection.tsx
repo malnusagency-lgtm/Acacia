@@ -98,7 +98,7 @@ export default function PricingSection() {
             <StaggerItem key={plan.name}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className={`relative p-8 lg:p-10 rounded-2xl flex flex-col h-full transition-all ${
+                className={`relative p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col h-full transition-all ${
                   plan.popular
                     ? "bg-primary-container dark:bg-primary-container border-2 border-primary/30 shadow-[0_0_40px_var(--glow-primary)] z-10 scale-[1.02]"
                     : "glass"

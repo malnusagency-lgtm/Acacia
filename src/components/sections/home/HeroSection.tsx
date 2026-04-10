@@ -61,7 +61,7 @@ export default function HeroSection() {
 
         {/* Right — Quick Estimate Card */}
         <ScrollReveal direction="right" delay={0.6}>
-          <div className="glass p-8 rounded-2xl shadow-2xl max-w-md mx-auto lg:ml-auto border border-outline-variant/10">
+          <div className="glass p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:ml-auto border border-outline-variant/10">
             <h3 className="text-2xl font-heading font-bold mb-6 flex items-center gap-3">
               <Sparkles size={22} className="text-accent" />
               Instant Estimate
@@ -78,7 +78,7 @@ export default function HeroSection() {
                   <option>Move-In/Out Cleaning</option>
                 </select>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-sans uppercase tracking-widest text-on-surface-variant mb-2">
                     Bedrooms

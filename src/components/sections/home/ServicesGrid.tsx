@@ -67,7 +67,7 @@ export default function ServicesGrid() {
             >
               <Link
                 href={service.href}
-                className="group block h-full card-elevated p-8 lg:p-10 rounded-2xl"
+                className="group block h-full card-elevated p-6 md:p-8 lg:p-10 rounded-2xl"
               >
                 <div className={`${service.color} mb-6`}>
                   <service.icon size={36} strokeWidth={1.5} />
