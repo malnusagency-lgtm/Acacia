@@ -6,6 +6,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFAB from "@/components/ui/WhatsAppFAB";
+import PageEntrance from "@/components/PageEntrance";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -54,7 +55,9 @@ export default function RootLayout({
           <LenisProvider>
             <Navbar />
             <main className="flex-1 flex flex-col overflow-x-hidden">
-              {children}
+              <PageEntrance>
+                {children}
+              </PageEntrance>
             </main>
             <Footer />
             <WhatsAppFAB />

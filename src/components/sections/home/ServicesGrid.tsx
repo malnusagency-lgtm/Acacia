@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Home, Building2, Bug, Truck, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -67,20 +68,31 @@ export default function ServicesGrid() {
             >
               <Link
                 href={service.href}
-                className="group block h-full card-elevated p-6 md:p-8 lg:p-10 rounded-2xl"
+                className="group block h-full focus:outline-none"
               >
-                <div className={`${service.color} mb-6`}>
-                  <service.icon size={36} strokeWidth={1.5} />
-                </div>
-                <h3 className="text-2xl font-heading font-bold mb-4 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-on-surface-variant mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight size={16} />
-                </span>
+                <motion.div
+                  whileHover={{ 
+                    y: -10,
+                    scale: 1.02,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.12)"
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="h-full card-elevated p-6 md:p-8 lg:p-10 rounded-2xl border border-outline-variant/10 group-hover:border-primary/30 transition-colors"
+                >
+                  <div className={`${service.color} mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                    <service.icon size={36} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold mb-4 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-on-surface-variant mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                    Learn More <ArrowRight size={16} />
+                  </span>
+                </motion.div>
               </Link>
             </StaggerItem>
           ))}

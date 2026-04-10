@@ -21,6 +21,24 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.q,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a,
+              },
+            })),
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
