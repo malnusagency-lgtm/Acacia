@@ -139,6 +139,13 @@ h1, h2, h3, h4, h5, h6 {
   border-top-color: rgba(255, 255, 255, 0.12);
 }
 
+@utility glass-darker {
+  background: color-mix(in srgb, var(--background), transparent 20%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
 @utility glow-hover {
   transition: box-shadow 0.4s ease;
   &:hover {
