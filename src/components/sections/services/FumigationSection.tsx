@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function FumigationSection() {
   return (
-    <section id="fumigation" className="py-24 lg:py-32 scroll-mt-20">
+    <section id="fumigation" className="py-24 lg:py-32 scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-surface-low dark:bg-surface-low rounded-[2rem] p-8 lg:p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">

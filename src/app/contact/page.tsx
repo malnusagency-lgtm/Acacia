@@ -45,7 +45,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Cards */}
-      <section className="py-16 bg-surface-low">
+      <section className="py-16 bg-surface-low overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <StaggerContainer className="grid md:grid-cols-3 gap-6">
             <StaggerItem>
@@ -85,7 +85,7 @@ export default function ContactPage() {
       </section>
 
       {/* Inquiry Form + Map */}
-      <section className="py-24 lg:py-32">
+      <section className="py-24 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal direction="left">
@@ -149,7 +149,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 lg:py-32 bg-surface-low">
+      <section className="py-24 lg:py-32 bg-surface-low overflow-hidden">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">Frequently Asked Questions</h2>

@@ -10,7 +10,7 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Our Leadership</h2>

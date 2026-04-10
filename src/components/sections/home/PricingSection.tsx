@@ -56,7 +56,7 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "oneTime">("monthly");
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-lowest">
+    <section className="py-24 lg:py-32 bg-surface-lowest overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
