@@ -2,6 +2,8 @@
 
 import { Star } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -43,12 +45,17 @@ export default function TestimonialsSection() {
           </p>
         </ScrollReveal>
 
-        <div className="flex gap-6 overflow-x-auto pb-8 snap-x hide-scrollbar -mx-6 px-6">
+        {/* Outer overflow container for physics calculations */}
+        <motion.div className="cursor-grab active:cursor-grabbing overflow-hidden pb-8 -mx-6 px-6">
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -1000 }} // Note: in sophisticated production, left constraint is mapped to scrollWidth dynamcally. -1000 is safe padding fallback.
+            className="flex gap-6 w-max"
+          >
           {testimonials.map((testimonial, i) => (
-            <ScrollReveal
+            <div
               key={testimonial.name}
-              delay={i * 0.1}
-              className="min-w-[85vw] sm:min-w-[340px] md:min-w-[380px] snap-center"
+              className="min-w-[85vw] sm:min-w-[340px] md:min-w-[380px]"
             >
               <div className="glass p-8 rounded-2xl h-full flex flex-col">
                 <div className="flex gap-1 text-accent mb-5">
@@ -71,9 +78,10 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               </div>
-            </ScrollReveal>
+            </div>
           ))}
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

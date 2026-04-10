@@ -71,7 +71,7 @@ export default function HeroSection() {
                 <label className="block text-xs font-sans uppercase tracking-widest text-on-surface-variant mb-2">
                   Service Type
                 </label>
-                <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-sm transition-all">
+                <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-base transition-all">
                   <option>Home Cleaning</option>
                   <option>Office Cleaning</option>
                   <option>Fumigation</option>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                   <label className="block text-xs font-sans uppercase tracking-widest text-on-surface-variant mb-2">
                     Bedrooms
                   </label>
-                  <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-sm transition-all">
+                  <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-base transition-all">
                     <option>Studio / 1BR</option>
                     <option>2 Bedrooms</option>
                     <option>3 Bedrooms</option>
@@ -94,7 +94,7 @@ export default function HeroSection() {
                   <label className="block text-xs font-sans uppercase tracking-widest text-on-surface-variant mb-2">
                     Frequency
                   </label>
-                  <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-sm transition-all">
+                  <select className="w-full bg-surface-lowest dark:bg-surface-lowest border border-outline-variant/20 rounded-xl text-on-surface focus:ring-2 focus:ring-accent p-3 text-base transition-all">
                     <option>One-time</option>
                     <option>Weekly</option>
                     <option>Bi-weekly</option>

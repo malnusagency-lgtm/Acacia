@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 interface ParallaxSectionProps {
@@ -44,13 +45,16 @@ export default function ParallaxSection({
         className="absolute inset-0 z-0"
         style={{ y: springY, scale: springScale }}
       >
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${backgroundImage}')`,
-            opacity: 1, // Higher visibility as requested
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src={backgroundImage}
+            alt="Hero background"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 100vw"
+          />
+        </div>
         {/* Dynamic Overlays */}
         <motion.div
             className="absolute inset-0 bg-background/20 dark:bg-background/40 backdrop-blur-[1px]"

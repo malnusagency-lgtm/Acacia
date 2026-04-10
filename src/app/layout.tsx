@@ -24,6 +24,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   title: "Glacier group | Premium Cleaning & Fumigation in Nairobi",
   description:
     "Nairobi's most trusted cleaning and fumigation service. Home cleaning, office cleaning, fumigation, and move-in/out services. Eco-friendly products, professional teams, same-day service.",
