@@ -45,9 +45,6 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <span className="text-on-primary font-heading font-black text-sm">A</span>
-            </div>
             <span className="text-lg md:text-xl font-heading font-black tracking-tighter text-primary">
               GLACIER GROUP
             </span>
@@ -114,19 +111,6 @@ export default function Navbar() {
               </AnimatePresence>
             </button>
 
-            {/* Book Now CTA */}
-            {pathname !== '/' && (
-              <MagneticWrapper className="hidden md:block">
-                <Link
-                  href="/booking"
-                  className="flex bg-accent text-on-accent px-6 py-2.5 rounded-full font-heading font-bold text-sm glow-accent transition-all duration-300 hover:scale-105 active:scale-95"
-                >
-                  Book Now
-                </Link>
-              </MagneticWrapper>
-            )}
-
-            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant/50 transition-all"
@@ -178,21 +162,6 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
-                {pathname !== '/' && (
-                  <motion.div
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="mt-4"
-                  >
-                    <Link
-                      href="/booking"
-                      className="block w-full text-center bg-accent text-on-accent px-6 py-4 rounded-xl font-heading font-bold text-lg"
-                    >
-                      Book Now
-                    </Link>
-                  </motion.div>
-                )}
               </div>
             </motion.div>
           </motion.div>

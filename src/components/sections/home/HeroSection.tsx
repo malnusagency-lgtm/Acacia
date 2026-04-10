@@ -63,7 +63,6 @@ export default function HeroSection() {
         <ScrollReveal direction="right" delay={0.6}>
           <div className="glass p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:ml-auto border border-outline-variant/10">
             <h3 className="text-2xl font-heading font-bold mb-6 flex items-center gap-3">
-              <Sparkles size={22} className="text-accent" />
               Instant Estimate
             </h3>
             <div className="space-y-4">

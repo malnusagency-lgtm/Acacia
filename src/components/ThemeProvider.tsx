@@ -10,7 +10,7 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: "dark",
+  theme: "light",
   toggleTheme: () => {},
 });
 
@@ -19,7 +19,7 @@ export function useTheme() {
 }
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
   // Prevent flash — render with dark class initially, hydrate later
   if (!mounted) {
     return (
-      <ThemeContext.Provider value={{ theme: "dark", toggleTheme }}>
+      <ThemeContext.Provider value={{ theme: "light", toggleTheme }}>
         {children}
       </ThemeContext.Provider>
     );
