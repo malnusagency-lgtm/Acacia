@@ -26,7 +26,7 @@ export default function HeroSection() {
             </div>
           </ScrollReveal>
 
-          <TextReveal className="text-4xl md:text-6xl lg:text-8xl font-heading font-bold leading-[1.1] lg:leading-[0.9] tracking-tighter mb-8">
+          <TextReveal className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] lg:leading-[0.9] tracking-tighter mb-8 break-words">
             Premium Cleaning & Fumigation in Nairobi
           </TextReveal>
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.7} className="flex flex-wrap justify-center lg:justify-start gap-4">
+          <ScrollReveal delay={0.7} className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full px-4 sm:px-0">
             <MagneticWrapper>
               <Link
                 href="/booking"

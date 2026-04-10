@@ -48,7 +48,7 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               <span className="text-on-primary font-heading font-black text-sm">A</span>
             </div>
-            <span className="text-xl font-heading font-black tracking-tighter text-primary">
+            <span className="text-lg md:text-xl font-heading font-black tracking-tighter text-primary">
               GLACIER GROUP
             </span>
           </Link>

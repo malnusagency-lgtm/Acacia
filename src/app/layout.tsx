@@ -48,7 +48,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} dark`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-background text-foreground">
+      <body className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
         <ThemeProvider>
           <LenisProvider>
             <Navbar />
