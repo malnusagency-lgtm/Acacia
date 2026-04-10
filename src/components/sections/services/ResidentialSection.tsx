@@ -16,7 +16,7 @@ export default function ResidentialSection() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold tracking-tight leading-tight">
                 Home Deep<br />Cleaning
               </h2>
             </ScrollReveal>

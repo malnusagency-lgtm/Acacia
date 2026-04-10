@@ -8,12 +8,13 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
     <ReactLenis
       root
       options={{
-        duration: 1.4,
+        duration: 1.8,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         orientation: "vertical",
         gestureOrientation: "vertical",
-        touchMultiplier: 2,
+        touchMultiplier: 1.5,
         smoothWheel: true,
+        smoothTouch: true,
         infinite: false,
       }}
     >

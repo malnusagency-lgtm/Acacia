@@ -37,28 +37,28 @@ export default function Footer() {
                 href="https://wa.me/254700000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-surface-mid flex items-center justify-center text-on-surface-variant hover:bg-[#25D366] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 shadow-sm"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-surface-mid flex items-center justify-center text-on-surface-variant hover:bg-gradient-to-br hover:from-[#f09433] hover:to-[#bc1888] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[#E4405F]/10 flex items-center justify-center text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition-all duration-300 shadow-sm"
                 aria-label="Instagram"
               >
                 <FaInstagram size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-surface-mid flex items-center justify-center text-on-surface-variant hover:bg-[#1877F2] hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all duration-300 shadow-sm"
                 aria-label="Facebook"
               >
                 <FaFacebookF size={16} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-surface-mid flex items-center justify-center text-on-surface-variant hover:bg-black hover:text-white transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center text-on-surface hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow-sm"
                 aria-label="TikTok"
               >
                 <FaTiktok size={16} />

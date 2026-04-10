@@ -11,6 +11,7 @@ interface ParallaxSectionProps {
   parallaxStrength?: number;
   className?: string;
   minHeight?: string;
+  priority?: boolean;
 }
 
 export default function ParallaxSection({
@@ -20,6 +21,7 @@ export default function ParallaxSection({
   parallaxStrength = 150,
   className = "",
   minHeight = "min-h-[100dvh]",
+  priority = false,
 }: ParallaxSectionProps) {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -50,7 +52,7 @@ export default function ParallaxSection({
             src={backgroundImage}
             alt="Hero background"
             fill
-            priority
+            priority={priority}
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 100vw"
           />

@@ -98,7 +98,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="grayscale dark:grayscale contrast-110 opacity-80 max-w-full"
+                  className="max-w-full"
                 ></iframe>
               </div>
               <div className="glass p-5 rounded-xl inline-flex items-center gap-3">

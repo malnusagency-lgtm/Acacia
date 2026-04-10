@@ -19,7 +19,7 @@ export default function FumigationSection() {
                   <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2 animate-pulse" />
                   <span className="text-accent text-[10px] font-bold uppercase tracking-wider">Pest Control</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight mb-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold tracking-tight mb-6 leading-tight">
                   Professional Fumigation
                 </h2>
                 <p className="text-on-surface-variant leading-relaxed mb-10">

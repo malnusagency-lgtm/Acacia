@@ -31,7 +31,7 @@ export default function CoverageSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale dark:grayscale contrast-110 opacity-80 max-w-full"
+                className="max-w-full"
               ></iframe>
               <div className="absolute inset-0 pointer-events-none bg-primary/5 dark:bg-primary/5 mix-blend-overlay" />
             </div>

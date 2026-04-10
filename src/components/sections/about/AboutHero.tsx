@@ -10,6 +10,7 @@ export default function AboutHero() {
       backgroundImage="/images/about_hero.png"
       parallaxStrength={150}
       minHeight="min-h-[70vh]"
+      priority={true}
       className="pt-20"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

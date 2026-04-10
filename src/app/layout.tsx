@@ -53,7 +53,9 @@ export default function RootLayout({
         <ThemeProvider>
           <LenisProvider>
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 flex flex-col overflow-x-hidden">
+              {children}
+            </main>
             <Footer />
             <WhatsAppFAB />
           </LenisProvider>

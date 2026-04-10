@@ -12,6 +12,7 @@ export default function HeroSection() {
     <ParallaxSection
       backgroundImage="/images/home_hero.png"
       parallaxStrength={200}
+      priority={true}
       className="pt-20"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full pb-12 lg:pb-0">
@@ -26,8 +27,8 @@ export default function HeroSection() {
             </div>
           </ScrollReveal>
 
-          <TextReveal className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] lg:leading-[0.9] tracking-tighter mb-8 break-words">
-            Premium Cleaning & Fumigation in Nairobi
+          <TextReveal className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight lg:leading-tight tracking-tighter mb-8 break-words text-on-surface">
+            Premium Cleaning & Fumigation
           </TextReveal>
 
           <ScrollReveal delay={0.5}>
